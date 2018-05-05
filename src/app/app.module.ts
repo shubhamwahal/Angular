@@ -16,6 +16,7 @@ import { subscribeOn } from 'rxjs/operator/subscribeOn';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
+import {DishService} from './Services/dish.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
     HttpModule,
     FlexLayoutModule,
       ],
-  providers: [],
+  providers: [
+    DishService
+  ],
   bootstrap: [AppComponent],
   exports: [
     AppComponent,
